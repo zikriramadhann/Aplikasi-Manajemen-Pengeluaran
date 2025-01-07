@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Pengaturan viewport agar halaman responsif pada perangkat -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot</title>
+    <!-- Menyisipkan file CSS eksternal untuk styling -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Menyisipkan ikon Font Awesome dari CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header berisi judul dan navigasi utama -->
+    <header>
+      <h1>MANAJEMEN PENGELUARAN</h1>
+      <nav>
+        <ul>
+          <!-- Navigasi ke halaman Input Pengeluaran -->
+          <li><a href="index.html" class="nav-link">Input Pengeluaran</a></li>
+          <!-- Navigasi ke halaman Daftar Pengeluaran -->
+          <li><a href="list.html" class="nav-link">Daftar Pengeluaran</a></li>
+          <!-- Navigasi ke halaman Chatbot, diberi class active untuk menandai halaman aktif -->
+          <li><a href="chatbot.html" class="nav-link active">Chatbot</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Judul utama untuk halaman chatbot -->
+      <h2>CHATBOT</h2>
+      <!-- Kontainer untuk komponen chatbot -->
+      <div id="chat-container">
+        <!-- Area untuk menampilkan riwayat obrolan -->
+        <div id="chat-history"></div>
+        <!-- Area input pesan pengguna -->
+        <div id="chat-input">
+          <input type="text" id="message" placeholder="Ketik pesan Anda..." />
+          <button id="send-btn">Kirim</button>
+        </div>
+      </div>
+    </main>
+    <!-- Footer dengan informasi nama dan NIM -->
+    <footer>
+      <p>ZIKRI RAMADHAN - 22343085</p>
+    </footer>
+    <!-- Menyisipkan file JavaScript untuk fungsi chatbot -->
+    <script src="chatbot.js"></script>
+  </body>
+</html>

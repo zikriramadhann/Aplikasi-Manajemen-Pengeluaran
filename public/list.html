@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Pengaturan responsif untuk perangkat yang berbeda -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Pengeluaran</title>
+    <!-- Menghubungkan file CSS eksternal untuk styling -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Judul utama aplikasi -->
+      <h1>MANAJEMEN PENGELUARAN</h1>
+      <nav>
+        <!-- Navigasi aplikasi -->
+        <ul>
+          <li>
+            <!-- Tautan ke halaman Input Pengeluaran -->
+            <a href="index.html" class="nav-link">Input Pengeluaran</a>
+          </li>
+          <li>
+            <!-- Tautan aktif menunjuk halaman ini -->
+            <a href="list.html" class="nav-link active">Daftar Pengeluaran</a>
+          </li>
+          <li>
+            <!-- Tautan ke halaman Chatbot -->
+            <a href="chatbot.html" class="nav-link">Chatbot</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="list">
+        <!-- Judul untuk daftar pengeluaran -->
+        <h2>DAFTAR PENGELUARAN</h2>
+        <div>
+          <!-- Filter kategori pengeluaran -->
+          <label for="filter-kategori">Filter Kategori:</label>
+          <select id="filter-kategori">
+            <option value="">Semua Kategori</option>
+            <option value="Makanan">Makanan</option>
+            <option value="Minuman">Minuman</option>
+            <option value="Transportasi">Transportasi</option>
+            <option value="Belanja Bulanan">Belanja Bulanan</option>
+            <option value="Tagihan">Tagihan</option>
+            <option value="Hiburan">Hiburan</option>
+            <option value="Kesehatan">Kesehatan</option>
+            <option value="Pakaian">Pakaian</option>
+            <option value="Pendidikan">Pendidikan</option>
+            <option value="Perawatan Pribadi">Perawatan Pribadi</option>
+            <option value="Lain-lain">Lain-lain</option>
+          </select>
+
+          <!-- Filter harga maksimal -->
+          <label for="filter-harga">Filter Harga Maksimal:</label>
+          <input type="text" id="filter-harga" placeholder="Masukkan harga" />
+        </div>
+
+        <!-- Tabel untuk menampilkan daftar pengeluaran -->
+        <table id="expense-table">
+          <thead>
+            <tr>
+              <th>
+                Tanggal
+                <!-- Tombol untuk mengurutkan tanggal -->
+                <button id="sort-asc" onclick="sortTable('asc')">↑</button>
+                <button id="sort-desc" onclick="sortTable('desc')">↓</button>
+              </th>
+              <th>Kategori</th>
+              <th>Nama</th>
+              <th>
+                Harga
+                <!-- Tombol untuk mengurutkan harga -->
+                <button id="sort-asc" onclick="sortPrice('asc')">↑</button>
+                <button id="sort-desc" onclick="sortPrice('desc')">↓</button>
+              </th>
+              <th>Deskripsi</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody id="expense-list">
+            <!-- Data pengeluaran akan ditambahkan secara dinamis -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <!-- Informasi pembuat -->
+      <p>ZIKRI RAMADHAN - 22343085</p>
+    </footer>
+    <!-- Skrip eksternal untuk logika dan interaksi -->
+    <script src="script.js"></script>
+  </body>
+</html>

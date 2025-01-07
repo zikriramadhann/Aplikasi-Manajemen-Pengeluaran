@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Pengaturan responsif untuk mendukung berbagai perangkat -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Pengeluaran</title>
+    <!-- Link ke file CSS eksternal untuk styling -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Judul utama aplikasi -->
+      <h1>MANAJEMEN PENGELUARAN</h1>
+      <nav>
+        <!-- Navigasi utama aplikasi -->
+        <ul>
+          <li>
+            <!-- Tautan aktif menunjuk halaman ini -->
+            <a href="index.html" class="nav-link active">Input Pengeluaran</a>
+          </li>
+          <li>
+            <!-- Tautan ke daftar pengeluaran -->
+            <a href="list.html" class="nav-link">Daftar Pengeluaran</a>
+          </li>
+          <li>
+            <!-- Tautan ke halaman chatbot -->
+            <a href="chatbot.html" class="nav-link">Chatbot</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Subjudul untuk bagian input -->
+      <h2>INPUT PENGELUARAN</h2>
+      <section id="input">
+        <!-- Formulir untuk input data pengeluaran -->
+        <form id="expense-form">
+          <!-- Input untuk tanggal pengeluaran -->
+          <label for="tanggal">Tanggal:</label>
+          <input type="date" id="tanggal" name="tanggal" required />
+
+          <!-- Pilihan kategori pengeluaran -->
+          <label for="kategori">Kategori:</label>
+          <select id="kategori" name="kategori" required>
+            <!-- Pilihan kategori yang umum digunakan -->
+            <option value="Makanan">Makanan</option>
+            <option value="Minuman">Minuman</option>
+            <option value="Transportasi">Transportasi</option>
+            <option value="Belanja Bulanan">Belanja Bulanan</option>
+            <option value="Tagihan">Tagihan</option>
+            <option value="Hiburan">Hiburan</option>
+            <option value="Kesehatan">Kesehatan</option>
+            <option value="Pakaian">Pakaian</option>
+            <option value="Pendidikan">Pendidikan</option>
+            <option value="Perawatan Pribadi">Perawatan Pribadi</option>
+            <option value="Lain-lain">Lain-lain</option>
+          </select>
+
+          <!-- Input nama pengeluaran -->
+          <label for="nama">Nama:</label>
+          <input type="text" id="nama" name="nama" required />
+
+          <!-- Input harga pengeluaran -->
+          <label for="harga">Harga:</label>
+          <input
+            type="text"
+            id="harga"
+            name="harga"
+            required
+            oninput="formatHarga(this)"
+            <!--
+            Fungsi
+            untuk
+            memformat
+            input
+            harga
+            --
+          />
+
+          <!-- Input deskripsi pengeluaran -->
+          <label for="deskripsi">Deskripsi:</label>
+          <textarea id="deskripsi" name="deskripsi" required></textarea>
+
+          <!-- Tombol untuk menyimpan data -->
+          <button type="submit">Simpan Data</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <!-- Informasi identitas pembuat -->
+      <p>ZIKRI RAMADHAN - 22343085</p>
+    </footer>
+    <!-- Skrip eksternal untuk interaktivitas -->
+    <script src="script.js"></script>
+  </body>
+</html>
